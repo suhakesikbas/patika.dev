@@ -5,34 +5,34 @@ Blog oluşturmaya hazır mısınız? Konsol ekranında postlarımızı sıralaya
 
 Kolay gelsin.
 
-    const books = [
-    { name: "Kitap 1", author: "Yazar 1" },
-    { name: "Kitap 2", author: "Yazar 2" },
-    { name: "Kitap 3", author: "Yazar 3" },
+    const blogs = [
+    { title: "Başlık 1", description: "Açıklama 1" },
+    { title: "Başlık 2", description: "Açıklama 2" },
+    { title: "Başlık 3", description: "Açıklama 3" },
     ];
 
-    const listBooks = () => {
-    books.map((book) => {
-        console.log(book.name);
+    const blogList = () => {
+    blogs.map((blog) => {
+        console.log(`Blog Başlığı : ${blog.title}, \nBlog Açıklaması : ${blog.description}\n`);
     });
     };
+    blogList();
 
-    const addBook = (newBook) => {
+    const addBlog = (blog) => {
     const promise1 = new Promise((resolve, reject) => {
-        books.push(newBook);
-        resolve(books);
-        //reject('BIR HATA OLUSTU');
+        blogs.push(blog);
+        resolve(blogs);
+        reject("Blog eklenirken bir hata oluştu.");
     });
-
     return promise1;
     };
 
-    async function showBooks() {
+    async function showBlog() {
     try {
-        await addBook({ name: "Kitap 4", author: "Yazar 4" });
-        listBooks();
+        await addBlog({ title: "Başlık 4", description: "Açıklama 4" });
+        blogList();
     } catch (error) {
         console.log(error);
     }
     }
-    showBooks();
+    showBlog();
