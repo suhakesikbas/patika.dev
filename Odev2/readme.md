@@ -4,7 +4,7 @@
 Blog oluşturmaya hazır mısınız? Konsol ekranında postlarımızı sıralayalım, sonrasında yeni bir post oluşturalım ve yeni post ile birlikte postlarımızı tekrar sıralayalım.
 
 Kolay gelsin.
-
+```js
     const blogs = [
     { title: "Başlık 1", description: "Açıklama 1" },
     { title: "Başlık 2", description: "Açıklama 2" },
@@ -36,3 +36,4 @@ Kolay gelsin.
     }
     }
     showBlog();
+```
