@@ -10,7 +10,7 @@ ul {
 ul li {
   cursor: pointer;
   position: relative;
-  padding: 12px  40px;
+  padding: 12px  0px 12px 40px;
   background: #eee;
   font-size: 18px;
   transition: 0.2s;
@@ -23,6 +23,12 @@ ul li {
 }
 ul li .btn-close{
   float:right;
+    padding: 12px 20px;
+    margin-top: -12px;
+}
+ul li .btn-close:hover {
+
+  background-color: #f78502;
 }
 
 ul li:nth-child(odd) {
@@ -45,7 +51,7 @@ ul li.checked::before {
   border-color: #fff;
   border-style: solid;
   border-width: 0 2px 2px 0;
-  top: 10px;
+  top: 16px;
   left: 16px;
   transform: rotate(45deg);
   height: 15px;
